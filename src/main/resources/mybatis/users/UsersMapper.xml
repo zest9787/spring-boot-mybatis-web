@@ -9,6 +9,14 @@
         select *
         from   USERS
     </select>
+    <select id="getAuthority" resultType="java.lang.String">
+        select 'ADMIN' role from dual
+    </select>
+    <select id="getUser" parameterType="java.lang.String" resultType="net.lucidman.templates.springboot.springbootwebmybatis.model.User">
+        select *
+        from   USERS
+        where  USER_ID = #{user_id}
+    </select>
 
     <!--<insert id="add" parameterType="User" keyProperty="id">-->
     <!--insert into-->

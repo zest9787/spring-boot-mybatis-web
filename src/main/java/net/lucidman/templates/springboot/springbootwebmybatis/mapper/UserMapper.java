@@ -10,5 +10,8 @@ public interface UserMapper {
 
     public List<User> getUsers();
 
+    public List<String> getAuthority(String name);
+
+    public User getUser(String s);
 
 }

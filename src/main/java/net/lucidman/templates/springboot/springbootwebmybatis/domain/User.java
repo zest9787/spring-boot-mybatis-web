@@ -1,19 +1,12 @@
-package net.lucidman.templates.springboot.springbootwebmybatis.model;
+package net.lucidman.templates.springboot.springbootwebmybatis.domain;
 
-import lombok.Data;
-import org.apache.ibatis.type.Alias;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import java.io.Serializable;
 import java.util.Collection;
 
-@Data
-@Alias("User")
-public class User implements Serializable, UserDetails {
+public class User implements UserDetails {
 
-    private String USER_ID;
-    private String USER_NAME;
     private String username;
     private String password;
     private String name;
